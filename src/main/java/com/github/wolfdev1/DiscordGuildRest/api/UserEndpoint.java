@@ -55,7 +55,7 @@ public class UserEndpoint {
         OffsetDateTime ofdt = member.getTimeJoined();
         o.put("joinedAt", ofdt.getYear() + "-" + ofdt.getMonthValue() + "-" + ofdt.getDayOfMonth());
         o.put("hasBoost", member.isBoosting());
-        o.put("rank", Secrets.userxp(member));
+
 
         return o.toJSONString();
     }
